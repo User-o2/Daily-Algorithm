@@ -1,0 +1,13 @@
+*.o
+*.exe
+*.out
+*.obj
+*.ilk
+*.pdb
+*.lib
+*.exp
+
+*.win
+*.layout
+
+Makefile.win
