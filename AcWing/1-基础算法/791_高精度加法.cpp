@@ -2,7 +2,6 @@
 https://www.acwing.com/problem/content/793/
 
 高精度加法
-读到string，进行模拟加法
 */
 
 #include<iostream>
@@ -19,8 +18,8 @@ vector<int> add(vector<int>& A, vector<int>& B)
 	vector<int> res;
 	
 	//开始模拟加法
-	int r = 0;
-	for(int i = 0; i < A.size() || i < B.size(); i ++)
+	int r = 0; //维护进位
+	for(int i = 0; i < A.size() || i < B.size(); i ++) //从个位开始加起，完全遍历
 	{
 		int sum = r;
 		if(i < A.size())
