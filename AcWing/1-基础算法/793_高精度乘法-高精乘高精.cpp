@@ -1,7 +1,7 @@
 /*
 https://www.acwing.com/problem/content/795/
 
-高精度乘法
+高精度×高精度
 */
 
 #include<iostream>
