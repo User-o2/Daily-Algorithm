@@ -25,7 +25,7 @@ vector<int> mul(vector<int>& A, vector<int>& B)
 			C[i+j] += A[i]*B[j];
 	
 	//处理C每一位的进位，从个位向高位进位
-	for(int i = 0; i < C.size(); i ++)
+	for(int i = 0; i < C.size()-1; i ++) //NOTE：i 的遍历的上界应该是C.size()-1.因为不可能超过n+m位
 	{
 		C[i+1] += C[i]/10;
 		C[i] %= 10;
