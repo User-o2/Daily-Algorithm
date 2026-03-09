@@ -12,7 +12,8 @@ int n,m,q;
 int x1,y1,x2,y2,c;
 long long a[N][N],S[N][N];
 
-void insert(int x1, int y1, int x2, int y2, int c)
+//如果S[][]开了long long，c的声明务必使用long long！
+void insert(int x1, int y1, int x2, int y2, long long c)
 {
 	a[x1][y1] += c;
 	a[x1][y2+1] -= c;
