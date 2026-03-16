@@ -1,9 +1,9 @@
 /*
 https://www.acwing.com/problem/content/2818/
-
 双指针-同向双指针
 */
 
+//Upd 2026.3.16：单层while循环足矣，优雅~
 #include<iostream>
 #include<cstdio>
 using namespace std;
@@ -14,29 +14,29 @@ int n,m;
 
 int main()
 {
-	scanf("%d%d",&n,&m);
-	for(int i = 0; i < n; i ++)
-		scanf("%d",&a[i]);
-	for(int i = 0; i < m; i ++)
-		scanf("%d",&b[i]);
-	
-	bool sta = true;
-	int j = 0; //遍历b数组
-	for(int i = 0; i < n; i ++) //遍历a数组
-	{
-		while(j < m && a[i] != b[j])
-			j ++;
-		if(j >= m) //遍历完b了无匹配，不是子序列
-		{
-			sta = false;
-			break;
-		}
-		if(j < m) //匹配到一位，继续下一位的匹配
-			j ++;
-	}
-	if(sta)
-		printf("Yes");
-	else
-		printf("No");
-	return 0;
+    scanf("%d%d",&n,&m);
+    for(int i = 0; i < n; i ++)
+        scanf("%d",&a[i]);
+    for(int j = 0; j < m; j ++)
+        scanf("%d",&b[j]);
+    
+    //判断子序列
+    int i = 0, j = 0;
+    int cnt = 0;
+    while(i < n && j < m)
+    {
+        if(a[i] == b[j]) //匹配到
+        {
+            cnt += 1;
+            i ++;
+            j ++;
+        }
+        else //未匹配到
+            j ++;
+    }
+    if(cnt == n)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
 }
