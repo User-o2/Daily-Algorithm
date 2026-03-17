@@ -1,7 +1,7 @@
 /*
 https://www.acwing.com/problem/content/description/1573/
 
-双指针
+双指针-滑动窗口
 */
 
 #include<iostream>

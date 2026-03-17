@@ -1,3 +1,8 @@
+/*
+https://www.luogu.com.cn/problem/P8783
+
+双指针-滑动窗口+二维前缀和
+*/
 #include<iostream>
 #include<cstdio>
 using namespace std;
