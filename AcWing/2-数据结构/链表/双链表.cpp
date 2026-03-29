@@ -75,21 +75,21 @@ int main()
 		{
 			int k;
 			cin >> k;
-			//将第k个插入的节点删除，idx为k-1
+			//将第k个插入的节点删除，idx为k+1
 			del(k+1);
 		}
 		else if(opt == "IL")
 		{
 			int k,x;
 			cin >> k >> x;
-			//在第k个插入节点的左侧插入，即在l[k-1]的右侧插入
+			//在第k个插入节点的左侧插入，即在l[k+1]的右侧插入
 			add_to_right(l[k+1],x);
 		}
 		else if(opt == "IR")
 		{
 			int k,x;
 			cin >> k >> x;
-			//在第k个插入节点的右侧插入，即在k-1的右侧插入
+			//在第k个插入节点的右侧插入，即在k+1的右侧插入
 			add_to_right(k+1,x);
 		}
 	}
