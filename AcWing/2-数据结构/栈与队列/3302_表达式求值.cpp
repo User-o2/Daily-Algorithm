@@ -1,7 +1,8 @@
 /*
 https://www.acwing.com/problem/content/description/3305/
 
-栈的应用：表达式求值
+栈的应用：中缀表达式求值
+[STL]版本
 */
 
 #include<iostream>
