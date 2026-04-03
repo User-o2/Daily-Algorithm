@@ -20,7 +20,7 @@ public:
             string c = tokens[i];
             if(c=="+" || c=="-" || c=="*" || c=="/") //1.遇到运算符，直接弹出两个数字计算即可
             {
-                int b = num[tt--]; //先出栈的是左操作数
+                int b = num[tt--]; //先出栈的是右操作数
                 int a = num[tt--];
 
                 int res = 0;
