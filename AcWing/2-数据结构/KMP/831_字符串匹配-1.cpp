@@ -3,6 +3,8 @@ https://www.acwing.com/problem/content/description/833/
 在一个文本串中查找一个模式串出现的索引
 最优解是KMP算法，稳定的O(N+M)
 这里.find()的平均时间复杂度为O(N)，但是脏数据会TLE
+
+[.find()写法]
 */
 #include<iostream>
 #include<string>
