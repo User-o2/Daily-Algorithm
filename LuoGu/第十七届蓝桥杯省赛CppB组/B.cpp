@@ -2,6 +2,8 @@
 https://www.luogu.com.cn/problem/P16233
 补题-蓝桥杯2026 C++B组 B题
 快速幂
+
+组合数学[hard]
 */
 #include<iostream>
 using namespace std;

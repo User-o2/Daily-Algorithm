@@ -1,6 +1,8 @@
 /*
 https://www.luogu.com.cn/problem/P16232
 补题-蓝桥杯2026 C++B组 A题
+
+简单数学，注意开long long
 */
 #include<iostream>
 using namespace std;

@@ -1,6 +1,8 @@
 /*
 https://www.luogu.com.cn/problem/P16234
 补题-蓝桥杯2026 C++B组 C题
+
+思维题
 */
 #include<iostream>
 using namespace std;
