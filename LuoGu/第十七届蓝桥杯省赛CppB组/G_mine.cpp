@@ -67,6 +67,8 @@ int main()
 		max_cnt = max(max_cnt,cur_max_cnt);
 	}
 	//答案就是：原本是理想温度的+最大净收益
+	//之前为什么减去损失呢：就是因为在这里计算的时候可以直接使用pre[n]进行最终的计算
+	//因为[l,r]区间之外，仍然可能存在原本就处于理想温度的情况
 	cout << pre[n] + max_cnt << "\n";
 	return 0;
 }
