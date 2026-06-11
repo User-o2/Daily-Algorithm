@@ -10,9 +10,9 @@ using namespace std;
 
 const int N = 110;
 int n,m;
+int mp[N][N]; //01地图
 
 /* BFS所需要的数据类型 */
-int mp[N][N]; //01地图
 int dist[N][N]; //作用：记录距离同时判断是否已访问过
 queue<pair<int,int>> q;
 int dx[] = {0,0,1,-1},dy[] = {-1,1,0,0};
@@ -25,7 +25,7 @@ int bfs(int st_x, int st_y)
     //每个节点最多入队一次、出队一次。每个节点都是入队的时候记录距离！
     q.push({st_x,st_y});
     dist[st_x][st_y] = 0; //起点需要移动0次
-    //立即检查
+    //这里专门特判起点是否就是终点
     if(st_x==n-1 && st_y==m-1)
         return 0;
     
@@ -38,14 +38,15 @@ int bfs(int st_x, int st_y)
         for(int i = 0; i < 4; i ++)
         {
             int nex_x = cur_x+dx[i], nex_y = cur_y+dy[i];
-            //判断是否越界、是否可走、是否是第一次到达
+            //越界判断+是否可访问+是否第一次到达
             if(nex_x>=0 && nex_x<n && nex_y>=0 && nex_y<m && mp[nex_x][nex_y]==0 && dist[nex_x][nex_y]==-1)
             {
                 //满足条件：入队、记录距离
                 q.push({nex_x,nex_y});
                 dist[nex_x][nex_y] = dist[cur_x][cur_y]+1;
                 
-                //判断是否是答案
+                //入队的时候就要检查是否到达终点
+                //不要等到出队的时候再检查！每个点最多入队一次、出队一次，所以只需要在入队的时候检查即可
                 if(nex_x==n-1 && nex_y==m-1)
                     return dist[nex_x][nex_y];
             }
