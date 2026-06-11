@@ -1,6 +1,6 @@
 # Daily Algorithm
 
-[![Language](https://img.shields.io/badge/Language-C++20-00599C.svg)](https://isocpp.org/)
+[![Language](https://img.shields.io/badge/Language-C++11-00599C.svg)](https://isocpp.org/)
 
 ## 📌 建立初衷
 
