@@ -2,7 +2,7 @@
 https://www.acwing.com/problem/content/106/
 货仓选址
 
-【绝对值三角不等式】|x|+|y|>=|x-y|
+【绝对值三角不等式、中位数模型】|x|+|y|>=|x-y|
 */
 #include<iostream>
 #include<algorithm>
