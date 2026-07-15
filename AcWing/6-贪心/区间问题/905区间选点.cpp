@@ -21,7 +21,7 @@ int main()
 	for(int i = 0; i < n; i ++)
 		cin >> line[i].first >> line[i].second;
 		
-	//本质上就是寻找最大不相交区间数量的问题
+	//本质上就是寻找最大不相交区间数量的问题（对称问题）
 	//1.对[右端点][从小到大]排序
 	sort(line,line+n,[](pair<int,int> a, pair<int,int> b){
 		return a.second < b.second;

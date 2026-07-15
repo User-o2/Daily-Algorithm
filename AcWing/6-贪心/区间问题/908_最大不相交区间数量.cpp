@@ -1,7 +1,7 @@
 /*
 https://www.acwing.com/problem/content/910/
 
-最大不相交区间数量，等价于区间选点问题。
+最大不相交区间数量，等价于区间选点问题的解法
 本质上都是求解“最大的、互不相交的区间数量”
 */
 #include<iostream>
