@@ -10,7 +10,7 @@ using namespace std;
 
 const int N = 100010;
 int stk[N]; //数组模拟栈
-int top; //top=0表示栈空，top>0表示栈中有元素；stk[top]永远指向栈顶
+int top; //NOTE:约定top=0表示栈空，top>0表示栈中有元素；stk[top]永远指向栈顶
 
 void push(int x)
 {
